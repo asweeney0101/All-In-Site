@@ -8,7 +8,7 @@
 
 :root {
   --red: rgb(225, 25, 25);
-  --red-light: rgb(255, 75, 50);
+  --red-light: rgb(255, 100, 100);
   --red-dim: #8a1e1e;
   --black: #080808;
   --dark: #111111;
@@ -299,29 +299,6 @@ nav.scrolled {
   transform: translateY(-1px);
 }
 
-/* scroll indicator */
-.scroll-hint {
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  opacity: 0.5;
-  animation: bounce 2s infinite;
-}
-.scroll-hint span {
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-.scroll-hint svg {
-  width: 20px;
-}
-
 /* ─── SECTION SHARED ─── */
 section {
   padding: 96px 40px;
@@ -353,9 +330,17 @@ section {
 
 /* ─── EVENT TYPES ─── */
 .events {
-  background: var(--dark);
+  background: #ffffff;
   padding-top: 80px;
   padding-bottom: 80px;
+}
+
+.events .section-label {
+  color: var(--red);
+}
+
+.events .section-title {
+  color: #111111;
 }
 
 .events-inner {
@@ -372,11 +357,11 @@ section {
 }
 
 .chip-card {
-  background: var(--dark2);
-  border: 1px solid rgba(207, 46, 46, 0.15);
+  background: #f7f7f7;
+  border: 1px solid rgba(207, 46, 46, 0.2);
   padding: 48px 32px;
   text-decoration: none;
-  color: var(--cream);
+  color: #111111;
   transition: all var(--transition);
   position: relative;
   overflow: hidden;
@@ -416,7 +401,7 @@ section {
 }
 .chip-card p {
   font-size: 0.9rem;
-  color: var(--muted);
+  color: #555555;
   line-height: 1.7;
 }
 .chip-arrow {
@@ -431,7 +416,11 @@ section {
 
 /* ─── ABOUT ─── */
 .about {
-  background: var(--black);
+  background: #f0f0f0;
+}
+
+.about .section-title {
+  color: #111111;
 }
 
 .about-inner {
@@ -445,15 +434,15 @@ section {
 .about-text p {
   font-size: 1rem;
   line-height: 1.85;
-  color: rgba(240, 232, 216, 0.75);
+  color: #444444;
   margin-bottom: 20px;
 }
 .about-badge {
   display: inline-flex;
   align-items: center;
   gap: 14px;
-  background: var(--dark2);
-  border: 1px solid rgba(207, 46, 46, 0.25);
+  background: #050404;
+  border: 1px solid rgba(207, 46, 46, 0.3);
   padding: 16px 24px;
   margin-top: 8px;
   margin-bottom: 32px;
@@ -466,7 +455,7 @@ section {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--red);
+  color: var(--cream);
   margin: 0;
 }
 
@@ -504,7 +493,7 @@ section {
   font-size: 0.75rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #666666;
   margin: 0;
   font-weight: 600;
 }

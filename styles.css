@@ -506,8 +506,9 @@ section {
 }
 .strip-track {
   display: flex;
+  width: max-content;
   gap: 56px;
-  animation: marquee 22s linear infinite;
+  animation: marquee 40s linear infinite;
   white-space: nowrap;
 }
 .strip-item {

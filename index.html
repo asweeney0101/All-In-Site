@@ -39,7 +39,56 @@
     <a href="casino-games.html" onclick="closeMobile()">Casino Games</a>
     <a href="events.html" onclick="closeMobile()">Events</a>
     <a href="resources.html" onclick="closeMobile()">Resources</a>
-    <a href="#contact" onclick="closeMobile()" style="color:var(--red);">Book Now</a>
+    <a href="#contact" style="color:var(--red);">Book Now</a>
+  </div>
+
+  <!-- booking modal -->
+  <div class="booking-modal" id="bookingModal">
+    <button class="modal-close" id="modalClose" aria-label="Close booking form">
+      <span></span><span></span>
+    </button>
+    <div class="modal-inner">
+      <p class="section-label" style="text-align:center">Get In Touch</p>
+      <h2 class="section-title" style="text-align:center; margin-bottom:20px">Request a Booking</h2>
+      <div class="red-rule" style="margin: 0 auto 36px;"></div>
+      <div class="contact-form">
+        <form id="bookingForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Name *</label>
+              <input type="text" id="fname" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="femail">Email *</label>
+              <input type="email" id="femail" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fphone">Phone</label>
+              <input type="tel" id="fphone" name="phone" placeholder="(402) 000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="fdate">Event Date</label>
+              <input type="date" id="fdate" name="event_date" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="flocation">Event Location</label>
+            <input type="text" id="flocation" name="event_location" placeholder="City, venue name, etc." />
+          </div>
+          <div class="form-group">
+            <label for="fmessage">Message</label>
+            <textarea id="fmessage" name="message"
+              placeholder="Tell us about your event — expected guests, type of event, games you're interested in..."></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-red" id="submitBtn">Send Request</button>
+          </div>
+          <p class="form-status" id="formStatus"></p>
+        </form>
+      </div>
+    </div>
   </div>
 
   <!-- ═══════════════════ HERO ═══════════════════ -->
@@ -132,7 +181,7 @@
         </div>
 
         <p class="reveal">At All In Party Rentals, we take immense pride in delivering impeccable customer service. We
-          understand the importance of personalization, which is why we offer a fully customizable casino experience
+          offer a fully customizable casino experience
           tailored to your preferences.</p>
         <p class="reveal">Our experience in the industry has allowed us to establish ourselves as leaders in providing
           exceptional service and unmatched quality. Our goal is to make your event an unforgettable success.</p>
@@ -222,45 +271,6 @@
         </div>
       </div>
 
-      <!-- FORM — swap FORMSPREE_ID in main.js once you have your Formspree endpoint -->
-      <div class="contact-form reveal">
-        <h3>Request Booking</h3>
-        <form id="bookingForm">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="fname">Name *</label>
-              <input type="text" id="fname" name="name" placeholder="Your name" required />
-            </div>
-            <div class="form-group">
-              <label for="femail">Email *</label>
-              <input type="email" id="femail" name="email" placeholder="your@email.com" required />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="fphone">Phone</label>
-              <input type="tel" id="fphone" name="phone" placeholder="(402) 000-0000" />
-            </div>
-            <div class="form-group">
-              <label for="fdate">Event Date</label>
-              <input type="date" id="fdate" name="event_date" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="flocation">Event Location</label>
-            <input type="text" id="flocation" name="event_location" placeholder="City, venue name, etc." />
-          </div>
-          <div class="form-group">
-            <label for="fmessage">Message</label>
-            <textarea id="fmessage" name="message"
-              placeholder="Tell us about your event — expected guests, type of event, games you're interested in..."></textarea>
-          </div>
-          <div class="form-submit">
-            <button type="submit" class="btn btn-red" id="submitBtn">Send Request</button>
-          </div>
-          <p class="form-status" id="formStatus"></p>
-        </form>
-      </div>
 
     </div>
   </section>

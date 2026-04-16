@@ -20,6 +20,32 @@ function closeMobile() {
   document.body.style.overflow = '';
 }
 
+// ── Booking modal ──
+const bookingModal = document.getElementById('bookingModal');
+const modalClose   = document.getElementById('modalClose');
+
+function openBooking(e) {
+  e.preventDefault();
+  closeMobile();
+  bookingModal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeBooking() {
+  bookingModal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('a[href="#contact"]').forEach(link => {
+  link.addEventListener('click', openBooking);
+});
+
+modalClose.addEventListener('click', closeBooking);
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && bookingModal.classList.contains('open')) closeBooking();
+});
+
 // ── Scroll reveal ──
 const revealEls = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {

@@ -502,7 +502,7 @@ section {
 }
 
 .about-inner {
-  padding: 80px 40px;
+  padding: 80px 40px 80px 8%;
   margin-right: 50%;
 }
 .about-text p {
@@ -612,8 +612,12 @@ section {
 }
 
 .contact-inner {
-  max-width: 720px;
+  max-width: 1100px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 80px;
+  align-items: start;
 }
 .contact-info h2 {
   margin-bottom: 16px;
@@ -927,6 +931,10 @@ footer {
   }
   .about-image-wrap {
     display: none;
+  }
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
   }
   .form-row {
     grid-template-columns: 1fr;

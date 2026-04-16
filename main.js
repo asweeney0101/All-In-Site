@@ -66,12 +66,13 @@ revealEls.forEach(el => observer.observe(el));
 // create a form pointed at your email, then replace YOUR_FORM_ID below.
 const FORMSPREE_ID = 'YOUR_FORM_ID'; // e.g. 'xpwzgknd'
 
-document.getElementById('bookingForm').addEventListener('submit', async function (e) {
+async function handleBookingSubmit(e) {
   e.preventDefault();
 
-  const btn    = document.getElementById('submitBtn');
-  const status = document.getElementById('formStatus');
-  const data   = new FormData(this);
+  const form   = e.target;
+  const btn    = form.querySelector('[type="submit"]');
+  const status = form.querySelector('.form-status');
+  const data   = new FormData(form);
 
   btn.textContent = 'Sending…';
   btn.disabled = true;
@@ -111,7 +112,7 @@ document.getElementById('bookingForm').addEventListener('submit', async function
     if (res.ok) {
       status.className = 'form-status success';
       status.textContent = '✓ Message sent! We\'ll be in touch soon.';
-      this.reset();
+      form.reset();
     } else {
       throw new Error('Server error');
     }
@@ -122,4 +123,7 @@ document.getElementById('bookingForm').addEventListener('submit', async function
     btn.textContent = 'Send Request';
     btn.disabled = false;
   }
-});
+}
+
+document.getElementById('bookingForm').addEventListener('submit', handleBookingSubmit);
+document.getElementById('bookingFormBottom').addEventListener('submit', handleBookingSubmit);

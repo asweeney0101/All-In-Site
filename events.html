@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events | All In Party Rentals — Corporate, Fundraisers &amp; Private Parties</title>
+  <meta name="description"
+    content="All In Party Rentals plans unforgettable casino nights for corporate parties, charity fundraisers, and private events across Nebraska." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Raleway:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="media/all-in-party-logo-black.svg" type="image/svg+xml" />
+  <link rel="icon" href="media/all-in-party-logo-white.ico" type="image/x-icon" />
+</head>
+<body>
+
+  <!-- ═══════════════════ NAV ═══════════════════ -->
+  <nav id="nav">
+    <a class="nav-logo" href="index.html">
+      <img src="media/all-in-party-logo-white.svg" alt="All In Party Rentals logo" />
+      <span class="nav-logo-text">All In Party Rentals</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="casino-games.html">Casino Games</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="#contact" class="nav-cta">Book Now</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="casino-games.html" onclick="closeMobile()">Casino Games</a>
+    <a href="events.html" onclick="closeMobile()">Events</a>
+    <a href="resources.html" onclick="closeMobile()">Resources</a>
+    <a href="#contact" style="color:var(--red);">Book Now</a>
+  </div>
+
+  <!-- booking modal -->
+  <div class="booking-modal" id="bookingModal">
+    <button class="modal-close" id="modalClose" aria-label="Close booking form">
+      <span></span><span></span>
+    </button>
+    <div class="modal-inner">
+      <p class="section-label" style="text-align:center">Get In Touch</p>
+      <h2 class="section-title" style="text-align:center; margin-bottom:20px">Request a Booking</h2>
+      <div class="red-rule" style="margin: 0 auto 36px;"></div>
+      <div class="contact-form">
+        <form id="bookingForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Name *</label>
+              <input type="text" id="fname" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="femail">Email *</label>
+              <input type="email" id="femail" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fphone">Phone</label>
+              <input type="tel" id="fphone" name="phone" placeholder="(402) 000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="fdate">Event Date</label>
+              <input type="date" id="fdate" name="event_date" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="flocation">Event Location</label>
+            <input type="text" id="flocation" name="event_location" placeholder="City, venue name, etc." />
+          </div>
+          <div class="form-group">
+            <label for="fmessage">Message</label>
+            <textarea id="fmessage" name="message"
+              placeholder="Tell us about your event — number of guests, type of event, games you're interested in..."></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-red" id="submitBtn">Send Request</button>
+          </div>
+          <p class="form-status" id="formStatus"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ PAGE HERO ═══════════════════ -->
+  <section class="page-hero">
+    <div class="page-hero-bg"
+      style="background-image: url('media/group-of-elegant-young-people-that-playing-poker-i-2021-08-30-12-47-47-utc.jpg');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="section-label reveal">Corporate · Fundraisers · Private</p>
+      <h1 class="reveal">Events We <em>Love</em></h1>
+      <p class="hero-sub reveal">From black-tie fundraisers to backyard birthday bashes — we bring the full casino experience to any occasion, tailored exactly to your vision.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ ANCHOR NAV ═══════════════════ -->
+  <nav class="event-anchor-nav" aria-label="Event type navigation">
+    <div class="event-anchor-nav-inner">
+      <a href="#corporate" class="event-anchor-link">Corporate Parties</a>
+      <a href="#fundraisers" class="event-anchor-link">Fundraisers</a>
+      <a href="#private" class="event-anchor-link">Private Parties</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ CORPORATE PARTIES ═══════════════════ -->
+  <div class="split-section" id="corporate">
+
+    <div class="split-row">
+      <div class="split-img">
+        <img src="media/friends-greeting-each-other-in-gaming-club-2022-08-25-19-08-11-utc.jpg"
+          alt="Colleagues enjoying a casino night event" />
+      </div>
+      <div class="split-body">
+        <p class="section-label" style="margin-bottom:8px;">Corporate Parties</p>
+        <h2>Take Your Company<br>Event <em>All In</em></h2>
+        <div class="red-rule"></div>
+        <p class="split-desc">A casino night is the ultimate corporate event — engaging, memorable, and endlessly fun for guests of all backgrounds. Whether you're hosting a client appreciation evening, an employee milestone celebration, or a holiday party, our team creates a seamless, polished experience that reflects the quality of your organization.</p>
+        <p class="split-desc">We handle everything: table selection, professional dealers, branded chip sets, setup, and breakdown. You show up, impress your guests, and take the credit.</p>
+        <div class="split-tags">
+          <span class="split-tag">Team Building</span>
+          <span class="split-tag">Client Entertainment</span>
+          <span class="split-tag">Holiday Parties</span>
+          <span class="split-tag">Milestone Events</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Corporate features -->
+    <div class="feature-pad" style="background:#ffffff;">
+      <div class="feature-grid">
+        <div class="feature-card reveal" style="background:#f7f7f7;">
+          <div class="feature-card-icon">🎖️</div>
+          <h3 style="color:#111;">White-Glove Service</h3>
+          <p style="color:#555;">Professional dealers in formal attire, premium equipment, and meticulous setup — every detail taken care of.</p>
+        </div>
+        <div class="feature-card reveal" style="background:#f7f7f7;">
+          <div class="feature-card-icon">🎨</div>
+          <h3 style="color:#111;">Fully Customizable</h3>
+          <p style="color:#555;">Custom chip sets, themed décor options, and flexible table configurations to match your company brand and venue.</p>
+        </div>
+        <div class="feature-card reveal" style="background:#f7f7f7;">
+          <div class="feature-card-icon">📋</div>
+          <h3 style="color:#111;">End-to-End Planning</h3>
+          <p style="color:#555;">From initial consultation to final breakdown, we coordinate every detail so your event runs flawlessly.</p>
+        </div>
+      </div>
+      <div class="feature-cta reveal">
+        <a href="#contact" class="btn btn-red">Plan Your Corporate Event</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════ FUNDRAISERS ═══════════════════ -->
+  <div class="split-section" id="fundraisers">
+
+    <div class="split-row reverse" style="background:var(--black);">
+      <div class="split-img">
+        <img src="media/from-below-anonymous-oining-hands-while-preparing-2022-02-14-13-47-58-utc-1.jpg"
+          alt="Hands joining together for a cause" />
+      </div>
+      <div class="split-body alt">
+        <p class="section-label" style="margin-bottom:8px;">Fundraisers</p>
+        <h2>Raise More.<br>Have More <em>Fun.</em></h2>
+        <div class="red-rule"></div>
+        <p class="split-desc">Casino nights are one of the most effective and exciting fundraising formats around. Guests purchase "fun money" to play the tables, with proceeds going directly to your cause — creating a thrilling evening where generosity and entertainment go hand in hand.</p>
+        <p class="split-desc">We've helped nonprofits, schools, churches, and community organizations across Nebraska raise thousands of dollars in a single night. Our team understands the unique needs of charity events and works with you to maximize both revenue and guest experience.</p>
+        <div class="split-tags">
+          <span class="split-tag">Charity Galas</span>
+          <span class="split-tag">School Fundraisers</span>
+          <span class="split-tag">Nonprofit Events</span>
+          <span class="split-tag">Community Benefits</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fundraising how it works -->
+    <div class="how-it-works-pad" style="background:var(--dark2);">
+      <div class="how-it-works-inner">
+        <p class="section-label reveal">How It Works</p>
+        <h2 class="section-title reveal" style="color:var(--cream);">Simple. Profitable.<br>Unforgettable.</h2>
+        <div class="red-rule reveal" style="margin:0 auto;"></div>
+        <div class="steps-grid">
+          <div class="step-item reveal">
+            <div class="step-number">01</div>
+            <h4>Guests Buy In</h4>
+            <p>Attendees purchase "fun money" chip packages — a direct and engaging donation mechanism that gets everyone involved.</p>
+          </div>
+          <div class="step-item reveal">
+            <div class="step-number">02</div>
+            <h4>Play All Night</h4>
+            <p>Guests enjoy hours of authentic casino gameplay with professional dealers — building excitement and encouraging additional buy-ins.</p>
+          </div>
+          <div class="step-item reveal">
+            <div class="step-number">03</div>
+            <h4>Win Prizes</h4>
+            <p>At night's end, chip totals are tallied and top winners claim prizes — a feel-good finale that rewards generosity.</p>
+          </div>
+        </div>
+        <div class="feature-cta reveal">
+          <a href="#contact" class="btn btn-red">Plan Your Fundraiser</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════ PRIVATE PARTIES ═══════════════════ -->
+  <div class="split-section" id="private">
+
+    <div class="split-row">
+      <div class="split-img">
+        <img src="media/groom-at-wedding-tuxedo-in-the-forest-2022-02-02-03-48-10-utc.jpg"
+          alt="Elegant private event" />
+      </div>
+      <div class="split-body">
+        <p class="section-label" style="margin-bottom:8px;">Private Parties</p>
+        <h2>Vegas Comes<br>to <em>You</em></h2>
+        <div class="red-rule"></div>
+        <p class="split-desc">Celebrate life's biggest moments with an unforgettable casino night. Birthdays, anniversaries, bachelor and bachelorette parties, retirement celebrations, reunions — our flexible rental packages scale to any size, from an intimate backyard setup to a full ballroom production.</p>
+        <p class="split-desc">We bring everything: the tables, the chips, the cards, the dealers, and the excitement. All you need to do is send the invites.</p>
+        <div class="split-tags">
+          <span class="split-tag">Birthdays</span>
+          <span class="split-tag">Anniversaries</span>
+          <span class="split-tag">Bachelor/Bachelorette</span>
+          <span class="split-tag">Reunions</span>
+          <span class="split-tag">Retirement Parties</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Private party testimonial / stat row -->
+    <div class="stat-split-pad" style="background:#f0f0f0;">
+      <div class="stat-split-inner">
+        <div class="reveal">
+          <p class="section-label">Why Choose Us</p>
+          <h2 class="section-title" style="color:#111;">Nebraska's Most<br>Trusted Casino Party Co.</h2>
+          <div class="red-rule"></div>
+          <p style="font-size:1.08rem; color:#555; line-height:1.85; margin-bottom:24px;">With years of experience and hundreds of events under our belt, we've perfected the private casino party. Our 5-star rated service means you can relax knowing every detail is handled by people who genuinely love what they do.</p>
+          <a href="#contact" class="btn btn-red">Book Your Party</a>
+        </div>
+        <div class="stat-cards-grid reveal">
+          <div class="stat-card">
+            <div class="stat-card-value">5★</div>
+            <div class="stat-card-label">Rated Service</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-value">100%</div>
+            <div class="stat-card-label">Customizable</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-value">NE</div>
+            <div class="stat-card-label">#1 in Nebraska</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-value">∞</div>
+            <div class="stat-card-label">Fun Guaranteed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ═══════════════════ CTA BANNER ═══════════════════ -->
+  <div class="cta-banner">
+    <div class="cta-banner-inner">
+      <p class="section-label reveal">Let's Get Started</p>
+      <h2 class="section-title reveal">Your Event.<br>Our <em>Expertise.</em></h2>
+      <div class="red-rule reveal" style="margin: 0 auto;"></div>
+      <p class="reveal">Tell us about your event and we'll put together a custom package that fits your vision and your budget. No pressure, no obligation — just a conversation about how to make your night unforgettable.</p>
+      <div class="reveal">
+        <a href="#contact" class="btn btn-red">Get a Free Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ CONTACT ═══════════════════ -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+
+      <div class="contact-info">
+        <p class="section-label reveal">Get In Touch</p>
+        <h2 class="section-title reveal">Let's Plan<br>Your Event</h2>
+        <div class="red-rule reveal"></div>
+        <p class="reveal">Ready to bring the excitement of a casino night to your event? Fill out the form and we'll be in touch to start building your perfect experience.</p>
+
+        <div class="contact-detail reveal">
+          <div class="contact-detail-icon">📧</div>
+          <div class="contact-detail-text">
+            <small>Email</small>
+            <a href="mailto:Contact@AllInPartyRentals.com">Contact@AllInPartyRentals.com</a>
+          </div>
+        </div>
+
+        <div class="contact-detail reveal">
+          <div class="contact-detail-icon">📞</div>
+          <div class="contact-detail-text">
+            <small>Phone</small>
+            <a href="tel:4028042711">402-804-2711</a>
+          </div>
+        </div>
+
+        <div class="social-links reveal">
+          <a class="social-link" href="https://www.facebook.com/allinpartyrentals" target="_blank" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
+          </a>
+          <a class="social-link" href="https://www.instagram.com/all_in_party_rentals/" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2" />
+            </svg>
+          </a>
+          <a class="social-link" href="https://www.linkedin.com/company/all-in-party-rentals/about/" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="service-areas reveal">
+          <strong>Service Areas</strong>
+          <p>Omaha, Elkhorn, Gretna, Blair, Fremont, Bellevue, Plattsmouth, Nebraska City, Council Bluffs, Glenwood, Ashland &amp; Lincoln</p>
+        </div>
+      </div>
+
+      <div class="contact-form reveal">
+        <h3>Request Booking</h3>
+        <form id="bookingFormBottom">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname2">Name *</label>
+              <input type="text" id="fname2" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="femail2">Email *</label>
+              <input type="email" id="femail2" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fphone2">Phone</label>
+              <input type="tel" id="fphone2" name="phone" placeholder="(402) 000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="fdate2">Event Date</label>
+              <input type="date" id="fdate2" name="event_date" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="flocation2">Event Location</label>
+            <input type="text" id="flocation2" name="event_location" placeholder="City, venue name, etc." />
+          </div>
+          <div class="form-group">
+            <label for="fmessage2">Message</label>
+            <textarea id="fmessage2" name="message"
+              placeholder="Tell us about your event — number of guests, type of event, games you're interested in..."></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-red" id="submitBtn2">Send Request</button>
+          </div>
+          <p class="form-status" id="formStatus2"></p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer>
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <img src="https://allinpartyrentals.com/wp-content/uploads/All-In-Party-Rentals-Logo-300x232.png"
+          alt="All In Party Rentals"
+          onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','<p style=\'font-family:var(--font-display);font-size:1.1rem;color:var(--red);font-weight:700;margin-bottom:16px;\'>All In Party Rentals</p>')" />
+        <p>Nebraska's #1 casino party rental company. Proudly serving Omaha and surrounding areas.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="casino-games.html">Casino Games</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <address>
+          <a href="mailto:Contact@AllInPartyRentals.com">Contact@AllInPartyRentals.com</a><br />
+          <a href="tel:4028042711">402-804-2711</a>
+        </address>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 All In Party Rentals. All Rights Reserved.</p>
+      <p>Omaha, Nebraska</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

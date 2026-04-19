@@ -118,7 +118,10 @@ async function handleBookingSubmit(e) {
     }
   } catch {
     status.className = 'form-status error';
-    status.textContent = 'Something went wrong. Please email us directly.';
+    status.innerHTML =
+      'Something went wrong — please reach us directly at ' +
+      '<a href="mailto:Contact@AllInPartyRentals.com">Contact@AllInPartyRentals.com</a>' +
+      ' or call <a href="tel:4028042711">402-804-2711</a>.';
   } finally {
     btn.textContent = 'Send Request';
     btn.disabled = false;

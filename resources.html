@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources | All In Party Rentals — FAQs &amp; Event Planning Guide</title>
+  <meta name="description"
+    content="Everything you need to know about booking a casino party with All In Party Rentals — FAQs, what's included, booking policies, and service areas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Raleway:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="media/all-in-party-logo-black.svg" type="image/svg+xml" />
+  <link rel="icon" href="media/all-in-party-logo-white.ico" type="image/x-icon" />
+</head>
+<body>
+
+  <!-- ═══════════════════ NAV ═══════════════════ -->
+  <nav id="nav">
+    <a class="nav-logo" href="index.html">
+      <img src="media/all-in-party-logo-white.svg" alt="All In Party Rentals logo" />
+      <span class="nav-logo-text">All In Party Rentals</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="casino-games.html">Casino Games</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="#contact" class="nav-cta">Book Now</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="casino-games.html" onclick="closeMobile()">Casino Games</a>
+    <a href="events.html" onclick="closeMobile()">Events</a>
+    <a href="resources.html" onclick="closeMobile()">Resources</a>
+    <a href="#contact">Book Now</a>
+  </div>
+
+  <!-- booking modal -->
+  <div class="booking-modal" id="bookingModal">
+    <button class="modal-close" id="modalClose" aria-label="Close booking form">
+      <span></span><span></span>
+    </button>
+    <div class="modal-inner">
+      <p class="section-label">Get In Touch</p>
+      <h2 class="section-title">Request a Booking</h2>
+      <div class="red-rule"></div>
+      <div class="contact-form">
+        <form id="bookingForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Name *</label>
+              <input type="text" id="fname" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="femail">Email *</label>
+              <input type="email" id="femail" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fphone">Phone</label>
+              <input type="tel" id="fphone" name="phone" placeholder="(402) 000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="fdate">Event Date</label>
+              <input type="date" id="fdate" name="event_date" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="flocation">Event Location</label>
+            <input type="text" id="flocation" name="event_location" placeholder="City, venue name, etc." />
+          </div>
+          <div class="form-group">
+            <label for="fmessage">Message</label>
+            <textarea id="fmessage" name="message"
+              placeholder="Tell us about your event — number of guests, type of event, games you're interested in..."></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-red" id="submitBtn">Send Request</button>
+          </div>
+          <p class="form-status" id="formStatus"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ PAGE HERO ═══════════════════ -->
+  <section class="page-hero">
+    <div class="page-hero-bg"
+      style="background-image: url('media/friends-greeting-each-other-in-gaming-club-2022-08-25-19-08-11-utc.jpg');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="section-label reveal">Planning &amp; FAQs</p>
+      <h1 class="reveal">Your Questions,<br><em>Answered</em></h1>
+      <p class="hero-sub reveal">Everything you need to know about booking a casino night — from legality and guest lists to what we bring and how to reserve your date.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ AT A GLANCE ═══════════════════ -->
+  <div class="resources-intro">
+    <div class="resources-intro-inner">
+      <p class="section-label reveal">At a Glance</p>
+      <h2 class="section-title reveal">Simple, Fun &amp; Fully Handled</h2>
+      <div class="red-rule reveal" style="margin: 0 auto;"></div>
+      <p class="reveal">We know planning an event comes with a lot of questions. Here's the short version: it's legal, it's inclusive, and we take care of everything. Scroll down for the full breakdown.</p>
+    </div>
+  </div>
+
+  <div class="feature-pad feature-pad--white" style="padding-top: 0;">
+    <div class="feature-grid">
+      <div class="feature-card feature-card--light reveal">
+        <div class="feature-card-icon">⚖️</div>
+        <h3>100% Legal</h3>
+        <p>Our events are strictly entertainment — no real money is ever wagered or exchanged. We operate fully within Nebraska law.</p>
+      </div>
+      <div class="feature-card feature-card--light reveal">
+        <div class="feature-card-icon">👨‍👩‍👧‍👦</div>
+        <h3>All Ages Welcome</h3>
+        <p>Because no currency changes hands, guests of any age can join in on the fun. It's a night everyone can enjoy.</p>
+      </div>
+      <div class="feature-card feature-card--light reveal">
+        <div class="feature-card-icon">🎰</div>
+        <h3>We Bring Everything</h3>
+        <p>Tables, chips, cards, dealers, setup, and breakdown — it's all on us. You focus on your guests, we handle the rest.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ FAQ ACCORDION ═══════════════════ -->
+  <div class="faq-section">
+    <div class="faq-inner">
+      <p class="section-label reveal">FAQ</p>
+      <h2 class="section-title reveal">Common Questions</h2>
+      <div class="red-rule reveal"></div>
+
+      <div class="faq-list">
+
+        <details class="faq-item reveal">
+          <summary>
+            Is it legal to host a casino night?
+            <span class="faq-icon">+</span>
+          </summary>
+          <p class="faq-body">Absolutely. All In Party Rentals events are strictly for entertainment — no real money is ever wagered or exchanged. Guests play with fun chips and compete for prizes, making our casino nights 100% legal across Nebraska. We've hosted hundreds of events and operate in full compliance with state regulations.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary>
+            Can guests of all ages participate?
+            <span class="faq-icon">+</span>
+          </summary>
+          <p class="faq-body">Yes. Because no actual currency changes hands, our casino events are open to guests of all ages — making them a great fit for family reunions, school fundraisers, and mixed-age celebrations. If alcohol will be served at your event, just ensure your venue independently follows local liquor laws for age restrictions.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary>
+            What's included in a rental?
+            <span class="faq-icon">+</span>
+          </summary>
+          <p class="faq-body">We provide everything needed for a complete casino experience: tables, cards, chips, dice, trays, and professional dealers. We handle full setup before your event and breakdown after — so your venue is left exactly as we found it. Custom casino-style chip sets are also available upon request for a personalized touch.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary>
+            What types of events do you service?
+            <span class="faq-icon">+</span>
+          </summary>
+          <p class="faq-body">All of them. We've done corporate parties, charity fundraisers, birthday bashes, anniversary celebrations, bachelor and bachelorette parties, school events, and everything in between. Our packages are fully customizable — whether you're hosting 20 people in your living room or 500 in a ballroom, we scale to fit.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary>
+            How do I book and what's the deposit?
+            <span class="faq-icon">+</span>
+          </summary>
+          <p class="faq-body">Booking is easy — reach out via the form below or give us a call and we'll check your date's availability. A 10% deposit secures your event on our calendar, with the remaining balance due on or before your event day. We recommend booking early, especially for Friday and Saturday evenings and peak seasons.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary>
+            Where do you travel to?
+            <span class="faq-icon">+</span>
+          </summary>
+          <p class="faq-body">We primarily serve the greater Omaha metropolitan area — including Elkhorn, Gretna, Blair, Fremont, Bellevue, Plattsmouth, Nebraska City, Council Bluffs, Glenwood, Ashland, and Lincoln. Have an event outside our usual range? Contact us — we're happy to discuss options for events further afield.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary>
+            Can I customize my package?
+            <span class="faq-icon">+</span>
+          </summary>
+          <p class="faq-body">Completely. From the mix of game tables to branded chip sets, themed décor, and dealer count — every detail of your event can be tailored to your vision and budget. During your initial consultation, we'll build a package around exactly what you need. Nothing cookie-cutter, ever.</p>
+        </details>
+
+        <details class="faq-item reveal">
+          <summary>
+            I have a question that's not listed here — what do I do?
+            <span class="faq-icon">+</span>
+          </summary>
+          <p class="faq-body">Just reach out. Call us at <a href="tel:4028042711" style="color:var(--red);text-decoration:none;">402-804-2711</a> or email <a href="mailto:Contact@AllInPartyRentals.com" style="color:var(--red);text-decoration:none;">Contact@AllInPartyRentals.com</a> and we'll give you a straight answer — along with a no-pressure custom quote if you're ready to take the next step.</p>
+        </details>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ CTA BANNER ═══════════════════ -->
+  <div class="cta-banner">
+    <div class="cta-banner-inner">
+      <p class="section-label reveal">Ready to Go?</p>
+      <h2 class="section-title reveal">Let's Build Your<br>Perfect <em>Casino Night</em></h2>
+      <div class="red-rule reveal"></div>
+      <p class="reveal">Still have questions or ready to get a quote? We'd love to hear about your event. Fill out the form below and we'll be in touch — usually within one business day.</p>
+      <div class="reveal">
+        <a href="#contact" class="btn btn-red">Get a Free Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ CONTACT ═══════════════════ -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+
+      <div class="contact-info">
+        <p class="section-label reveal">Get In Touch</p>
+        <h2 class="section-title reveal">Let's Plan<br>Your Event</h2>
+        <div class="red-rule reveal"></div>
+        <p class="reveal">Ready to bring the excitement of a casino night to your event? Fill out the form and we'll be in touch to start building your perfect experience.</p>
+
+        <div class="contact-detail reveal">
+          <div class="contact-detail-icon">📧</div>
+          <div class="contact-detail-text">
+            <small>Email</small>
+            <a href="mailto:Contact@AllInPartyRentals.com">Contact@AllInPartyRentals.com</a>
+          </div>
+        </div>
+
+        <div class="contact-detail reveal">
+          <div class="contact-detail-icon">📞</div>
+          <div class="contact-detail-text">
+            <small>Phone</small>
+            <a href="tel:4028042711">402-804-2711</a>
+          </div>
+        </div>
+
+        <div class="social-links reveal">
+          <a class="social-link" href="https://www.facebook.com/allinpartyrentals" target="_blank" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" /></svg>
+          </a>
+          <a class="social-link" href="https://www.instagram.com/all_in_party_rentals/" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 16 16" fill="currentColor">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0H8zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+            </svg>
+          </a>
+          <a class="social-link" href="https://www.linkedin.com/company/all-in-party-rentals/about/" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="service-areas reveal">
+          <strong>Service Areas</strong>
+          <p>Omaha, Elkhorn, Gretna, Blair, Fremont, Bellevue, Plattsmouth, Nebraska City, Council Bluffs, Glenwood, Ashland &amp; Lincoln</p>
+        </div>
+      </div>
+
+      <div class="contact-form reveal">
+        <h3>Request Booking</h3>
+        <form id="bookingFormBottom">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname2">Name *</label>
+              <input type="text" id="fname2" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="femail2">Email *</label>
+              <input type="email" id="femail2" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fphone2">Phone</label>
+              <input type="tel" id="fphone2" name="phone" placeholder="(402) 000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="fdate2">Event Date</label>
+              <input type="date" id="fdate2" name="event_date" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="flocation2">Event Location</label>
+            <input type="text" id="flocation2" name="event_location" placeholder="City, venue name, etc." />
+          </div>
+          <div class="form-group">
+            <label for="fmessage2">Message</label>
+            <textarea id="fmessage2" name="message"
+              placeholder="Tell us about your event — number of guests, type of event, games you're interested in..."></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-red" id="submitBtn2">Send Request</button>
+          </div>
+          <p class="form-status" id="formStatus2"></p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer>
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <img src="https://allinpartyrentals.com/wp-content/uploads/All-In-Party-Rentals-Logo-300x232.png"
+          alt="All In Party Rentals"
+          onerror="this.style.display='none'; this.insertAdjacentHTML('afterend','<p style=\'font-family:var(--font-display);font-size:1.1rem;color:var(--red);font-weight:700;margin-bottom:16px;\'>All In Party Rentals</p>')" />
+        <p>Nebraska's #1 casino party rental company. Proudly serving Omaha and surrounding areas.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="casino-games.html">Casino Games</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <address>
+          <a href="mailto:Contact@AllInPartyRentals.com">Contact@AllInPartyRentals.com</a><br />
+          <a href="tel:4028042711">402-804-2711</a>
+        </address>
+      </div>
+
+      <div class="footer-col footer-members">
+        <img src="media/NACPO-Member-Light.png" alt="NAPCO Member" />
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 All In Party Rentals. All Rights Reserved.</p>
+      <p>Omaha, Nebraska</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

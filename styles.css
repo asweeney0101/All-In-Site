@@ -1386,6 +1386,92 @@ footer {
   margin: 0 auto;
 }
 
+/* ─── FAQ ACCORDION ─── */
+.faq-section {
+  background: var(--dark2);
+  padding: 96px 40px;
+}
+.faq-inner {
+  max-width: 820px;
+  margin: 0 auto;
+}
+.faq-list {
+  margin-top: 56px;
+}
+.faq-item {
+  border-bottom: 1px solid rgba(207, 46, 46, 0.15);
+}
+.faq-item:first-child {
+  border-top: 1px solid rgba(207, 46, 46, 0.15);
+}
+details.faq-item > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 28px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--cream);
+  user-select: none;
+  transition: color var(--transition);
+}
+details.faq-item > summary::-webkit-details-marker {
+  display: none;
+}
+details.faq-item[open] > summary {
+  color: var(--red);
+}
+.faq-icon {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border: 1px solid rgba(207, 46, 46, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition);
+  font-size: 1rem;
+  color: var(--red);
+  line-height: 1;
+  font-style: normal;
+}
+details.faq-item[open] .faq-icon {
+  background: var(--red);
+  color: var(--black);
+  border-color: var(--red);
+  transform: rotate(45deg);
+}
+.faq-body {
+  padding: 0 48px 28px 0;
+  font-size: 1.07rem;
+  color: rgba(240, 232, 216, 0.7);
+  line-height: 1.85;
+}
+
+/* ─── RESOURCES INTRO ─── */
+.resources-intro {
+  background: #ffffff;
+  padding: 80px 40px;
+  text-align: center;
+}
+.resources-intro-inner {
+  max-width: 780px;
+  margin: 0 auto;
+}
+.resources-intro .section-title {
+  color: #111111;
+}
+.resources-intro > .resources-intro-inner > p {
+  font-size: 1.1rem;
+  color: #555555;
+  line-height: 1.85;
+  margin-top: 20px;
+}
+
 /* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {
   nav {
@@ -1500,5 +1586,17 @@ footer {
   }
   .stat-cards-grid {
     grid-template-columns: 1fr 1fr;
+  }
+  .faq-section {
+    padding: 72px 24px;
+  }
+  details.faq-item > summary {
+    font-size: 1.1rem;
+  }
+  .faq-body {
+    padding-right: 0;
+  }
+  .resources-intro {
+    padding: 64px 24px;
   }
 }

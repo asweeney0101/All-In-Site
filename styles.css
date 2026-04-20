@@ -804,9 +804,20 @@ footer {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: 48px;
   margin-bottom: 48px;
+}
+.footer-members img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  object-position: left;
+  opacity: 0.85;
+  transition: opacity var(--transition);
+}
+.footer-members img:hover {
+  opacity: 1;
 }
 .footer-brand img {
   height: 48px;

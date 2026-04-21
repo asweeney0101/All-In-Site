@@ -64,7 +64,7 @@ revealEls.forEach(el => observer.observe(el));
 // ── Contact form ──
 // To activate email delivery: sign up at https://formspree.io (free),
 // create a form pointed at your email, then replace YOUR_FORM_ID below.
-const FORMSPREE_ID = 'YOUR_FORM_ID'; // e.g. 'xpwzgknd'
+const FORMSPREE_ID = 'mrerypdk';
 
 async function handleBookingSubmit(e) {
   e.preventDefault();

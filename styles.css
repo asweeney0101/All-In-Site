@@ -1455,20 +1455,20 @@ details.faq-item[open] .faq-icon {
   line-height: 1.85;
 }
 
-/* ─── RESOURCES INTRO ─── */
-.resources-intro {
+/* ─── FAQ INTRO ─── */
+.faq-intro {
   background: #ffffff;
   padding: 80px 40px;
   text-align: center;
 }
-.resources-intro-inner {
+.faq-intro-inner {
   max-width: 780px;
   margin: 0 auto;
 }
-.resources-intro .section-title {
+.faq-intro .section-title {
   color: #111111;
 }
-.resources-intro > .resources-intro-inner > p {
+.faq-intro > .faq-intro-inner > p {
   font-size: 1.1rem;
   color: #555555;
   line-height: 1.85;
@@ -1603,7 +1603,7 @@ details.faq-item[open] .faq-icon {
   .faq-body {
     padding-right: 0;
   }
-  .resources-intro {
+  .faq-intro {
     padding: 64px 24px;
   }
 }

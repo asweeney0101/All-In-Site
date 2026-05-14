@@ -563,7 +563,7 @@ section {
   font-weight: 700;
 }
 .stat p {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #666666;
@@ -606,8 +606,7 @@ section {
 
 /* ─── CONTACT ─── */
 .contact {
-  background:
-    linear-gradient(rgba(8, 8, 8, 0.92), rgba(8, 8, 8, 0.92)),
+  background: linear-gradient(rgba(8, 8, 8, 0.92), rgba(8, 8, 8, 0.92)),
     url("media/Intersection-3.png") center / cover no-repeat;
 }
 
@@ -983,8 +982,12 @@ footer {
   grid-template-columns: 1fr 1fr;
   min-height: 500px;
 }
-.split-row.reverse .split-img { order: 2; }
-.split-row.reverse .split-body { order: 1; }
+.split-row.reverse .split-img {
+  order: 2;
+}
+.split-row.reverse .split-body {
+  order: 1;
+}
 
 .split-img {
   position: relative;
@@ -1127,9 +1130,9 @@ footer {
 
 /* ─── CTA BANNER ─── */
 .cta-banner {
-  background:
-    linear-gradient(rgba(8, 8, 8, 0.88), rgba(8, 8, 8, 0.88)),
-    url('media/group-of-elegant-young-people-that-playing-poker-i-2021-08-30-12-47-47-utc.jpg') center / cover no-repeat;
+  background: linear-gradient(rgba(8, 8, 8, 0.88), rgba(8, 8, 8, 0.88)),
+    url("media/group-of-elegant-young-people-that-playing-poker-i-2021-08-30-12-47-47-utc.jpg")
+      center / cover no-repeat;
   padding: 96px 40px;
   text-align: center;
 }
@@ -1534,8 +1537,12 @@ details.faq-item[open] .faq-icon {
   .split-img {
     height: 260px;
   }
-  .split-row.reverse .split-img { order: 0; }
-  .split-row.reverse .split-body { order: 0; }
+  .split-row.reverse .split-img {
+    order: 0;
+  }
+  .split-row.reverse .split-body {
+    order: 0;
+  }
   .split-body {
     padding: 48px 24px;
   }

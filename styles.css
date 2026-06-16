@@ -74,7 +74,7 @@ nav.scrolled {
   text-decoration: none;
 }
 .nav-logo img {
-  height: 44px;
+  height: 60px;
   width: auto;
   display: block;
 }
@@ -569,6 +569,10 @@ section {
   color: #666666;
   margin: 0;
   font-weight: 600;
+}
+
+.stat a {
+  text-decoration: none;
 }
 
 /* ─── SERVICES STRIP ─── */

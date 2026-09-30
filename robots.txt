@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.allinpartyrentals.com/sitemap.xml
+Sitemap: https://allinpartyrentals.com/sitemap.xml
